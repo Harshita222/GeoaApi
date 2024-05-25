@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timezone API</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .first {
+        background-color: #ffffff;
+        color: black;
+      }
+      .cst {
+        border: 2px solid #000000;
+        padding: 10px;
+      }
+      .card {
+        display: flex;
+        gap: 200px;
+      }
+      button {
+        /* background-color: #ffffff; */
+        padding: 10px 15px;
+        width: 100px;
+      }
+      .second {
+        /* width: 50%; */
+        background-color: #000000;
+        color: white;
+        margin-top: 30px;
+      }
+      input[type="text"] {
+        width: 98%;
+        padding: 8px;
+        margin-bottom: 20px;
+        background-color: #000000;
+      }
+      h2 {
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="first">
+      <h1>Timezone API</h1>
+
+      <h1>Your Current Timezone</h1>
+      <div class="cst">
+        <p>Name Of Time Zone:<span id="timezone-name"></span></p>
+        <p class="card">
+          <span id="lat">Lat:</span> <span id="long">Long:</span>
+        </p>
+        <p>Offset STD:<span id="offset-std"></span></p>
+        <p>Offset STD Seconds:<span id="offset-std-seconds"></span></p>
+        <p>Offset DST:<span id="offset-dst"></span></p>
+        <p>Offset DST Seconds:<span id="offset-dst-seconds"></span></p>
+        <p>Country:<span id="country"></span></p>
+        <p>Postcode: <span id="postcode"></span></p>
+        <p>City:<span id="city"></span></p>
+      </div>
+    </div>
+
+    <div class="second">
+      <h2>Enter Address</h2>
+
+      <input type="text" id="address" placeholder="Address" required /><br />
+      <button type="submit">Submit</button>
+    </div>
+    <script src="./user.js"></script>
+  </body>
+</html>
