@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timezone API</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .first {
+        background-color: #ffffff;
+        color: black;
+      }
+      .cst,
+      .cst2 {
+        border: 2px solid #000000;
+        padding: 10px;
+      }
+      .card {
+        display: flex;
+        gap: 200px;
+      }
+      button {
+        /* background-color: #ffffff; */
+        padding: 10px 15px;
+        width: 100px;
+      }
+      /* .second */
+      /* #address-form */
+      .form-group {
+        margin-bottom: 10px;
+
+        /* background-color: #000000; */
+        /* color: white; */
+        /* margin-top: 30px; */
+      }
+      input[type="text"] {
+        width: 98%;
+        padding: 8px;
+        margin-bottom: 20px;
+        color: #000000;
+        /* background-color: #000000; */
+      }
+      h2 {
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="first">
+      <h1>Timezone API</h1>
+
+      <h1>Your Current Timezone</h1>
+      <div class="cst">
+        <p>Name Of Time Zone:<span id="timezone-name"></span></p>
+        <p class="card">
+          <span id="lat">Lat:</span> <span id="long">Long:</span>
+        </p>
+        <p>Offset STD:<span id="offset-std"></span></p>
+        <p>Offset STD Seconds:<span id="offset-std-seconds"></span></p>
+        <p>Offset DST:<span id="offset-dst"></span></p>
+        <p>Offset DST Seconds:<span id="offset-dst-seconds"></span></p>
+        <p>Country:<span id="country"></span></p>
+        <p>Postcode: <span id="postcode"></span></p>
+        <p>City:<span id="city"></span></p>
+      </div>
+    </div>
+    <h2>Enter Address</h2>
+    <form id="address-form">
+      <div class="form-group">
+        <!-- <label for="address">Address</label> -->
+        <input type="text" id="address" name="address" required />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <!-- <div class="second">
+      <h2>Enter Address</h2>
+
+      <input type="text" id="address" placeholder="Address" required /><br />
+      <button type="submit">Submit</button>
+    </div> -->
+
+    <div class="result">
+      <h2>Your Result</h2>
+      <div class="cst2">
+        <p>
+          <strong>Name Of Time Zone:</strong>
+          <span id="address-timezone-name"></span>
+        </p>
+        <p><strong>Lat:</strong> <span id="address-lat"></span></p>
+        <p><strong>Long:</strong> <span id="address-long"></span></p>
+        <p>
+          <strong>Offset STD:</strong> <span id="address-offset-std"></span>
+        </p>
+        <p>
+          <strong>Offset STD Seconds:</strong>
+          <span id="address-offset-std-seconds"></span>
+        </p>
+        <p>
+          <strong>Offset DST:</strong> <span id="address-offset-dst"></span>
+        </p>
+        <p>
+          <strong>Offset DST Seconds:</strong>
+          <span id="address-offset-dst-seconds"></span>
+        </p>
+        <p><strong>Country:</strong> <span id="address-country"></span></p>
+        <p><strong>Postcode:</strong> <span id="address-postcode"></span></p>
+        <p><strong>City:</strong> <span id="address-city"></span></p>
+      </div>
+    </div>
+    <script src="./user.js"></script>
+  </body>
+</html>
